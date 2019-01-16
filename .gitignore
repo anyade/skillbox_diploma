@@ -9,6 +9,6 @@
 node_modules/
 npm-debug.*
 Thumbs.db
-/cache
-/ssh
+/.cache
+/.ssh
 .bash_history

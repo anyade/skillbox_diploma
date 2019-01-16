@@ -1,0 +1,58 @@
+.modal__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 20;
+}
+
+.modal {
+    margin: 0 6.25% 0;
+    position: fixed;
+    width: 87.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    z-index: 30;
+
+    &--contact,
+    &--call-back {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .modal {
+        margin: 0;
+        width: 450px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &--call-back {
+            width: 350px;
+        }
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .modal {
+        width: 500px;
+
+        &--call-back {
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .modal {
+        width: 700px;
+
+        &--call-back {
+            width: 600px;
+        }
+    }
+}

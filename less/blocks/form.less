@@ -1,0 +1,129 @@
+.form {
+    padding: 20px 6.25%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.form__label {
+    margin-bottom: 10px;
+    .font(16px, 400);
+}
+
+.form__input {
+    margin-bottom: 15px;
+    padding: 5px;
+    .font(14px, 400);
+    border: 1px solid @btn-white-border;
+    outline: none;
+
+    &--last {
+        margin-bottom: 30px;
+    }
+}
+
+.form__textarea {
+    margin-bottom: 30px;
+    padding: 5px;
+    .font(14px, 400);
+    border: 1px solid @btn-white-border;
+    outline: none;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+    box-shadow: 0 0 0 1px @btn-white-border;
+}
+
+.form__close {
+    padding: 0;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 6.25%;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.form__close::before, 
+.form__close::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 25px;
+    width: 2px;
+    background-color: @btn-white-border;
+}
+    
+.form__close::before {
+    transform: rotate(45deg);
+}
+
+.form__close::after {
+    transform: rotate(-45deg);
+}
+
+@media (min-width: @tablet-width) {
+    .form__label {
+        margin-bottom: 15px;
+        .font(18px, 400);
+    }
+
+    .form__input {
+        margin-bottom: 20px;
+        padding: 8px;
+        .font(16px, 400);
+
+        &--last {
+            margin-bottom: 35px;
+        }
+    }
+    
+    .form__textarea {
+        margin-bottom: 35px;
+        padding: 8px;
+        .font(18px, 400);
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .form {
+        padding: 60px 10%;
+    }
+
+    .form__label {
+        margin-bottom: 20px;
+        .font(20px, 400);
+    }
+
+    .form__input {
+        margin-bottom: 25px;
+        padding: 10px;
+        .font(18px, 400);
+
+        &--last {
+            margin-bottom: 40px;
+        }
+    }
+    
+    .form__textarea {
+        margin-bottom: 40px;
+        padding: 10px;
+        .font(20px, 400);
+    }
+
+    .form__close {
+        width: 35px;
+        height: 35px;
+        top: 45px;
+        right: 10%;
+    }
+
+    .form__close::before, 
+    .form__close::after {
+    height: 35px;
+}
+}

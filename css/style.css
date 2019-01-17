@@ -667,7 +667,15 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
+  text-align: center;
   background-color: #ff4e2e;
+}
+.button--red:hover,
+.button--footer:hover,
+.button--red :focus,
+.button--footer :focus {
+  outline: 2px solid #ff4e2e;
+  outline-offset: 3px;
 }
 @media (min-width: 600px) {
   .button--header {
@@ -681,6 +689,11 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     background-image: none;
     border: 1px solid #f82370;
+  }
+  .button--header:hover,
+  .button--header :focus {
+    font-weight: 500;
+    outline: 1px solid #f82370;
   }
   .button--red,
   .button--footer {
@@ -703,6 +716,12 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     background-image: none;
     border: 1px solid #f82370;
+  }
+  .button--footer:hover,
+  .button--footer :focus {
+    font-weight: 500;
+    outline: 1px solid #f82370;
+    outline-offset: 0;
   }
 }
 @media (min-width: 1920px) {
@@ -1134,6 +1153,10 @@ input[type="radio"].visually-hidden {
 }
 .services__item:last-child {
   margin-bottom: 51px;
+}
+.services__button {
+  margin: 0 auto;
+  display: block;
 }
 @media (min-width: 600px) {
   .services__list {

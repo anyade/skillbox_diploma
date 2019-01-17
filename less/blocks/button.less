@@ -18,7 +18,14 @@
         width: 100%;
         .font(16px, 400);
         color: #ffffff;
+        text-align: center;
         background-color: @btn-red;
+
+        &:hover,
+        :focus {
+            outline: 2px solid @btn-red;
+            outline-offset: 3px;
+        }
     }
 }
 
@@ -34,6 +41,12 @@
             background-color: #ffffff;
             background-image: none;
             border: 1px solid @btn-white-border;
+
+            &:hover,
+            :focus {
+            font-weight: 500;
+            outline: 1px solid @btn-white-border;
+        }
         }
 
         &--red,
@@ -59,6 +72,13 @@
             background-color: #ffffff;
             background-image: none;
             border: 1px solid @btn-white-border;
+
+            &:hover,
+            :focus {
+            font-weight: 500;
+            outline: 1px solid @btn-white-border;
+            outline-offset: 0;
+            }
         }
     }
 }

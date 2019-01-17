@@ -6,6 +6,15 @@ $(document).ready( function() {
     $(".decorative__div-1").addClass("about-me__decorative--div-1");
     $(".decorative__div-2").addClass("about-me__decorative--div-2");
 
+    $("a[href^='#']").on("click", function(event) {
+        event.preventDefault();
+        
+        var id = $(this).attr("href"),
+            top = $(id).offset().top;
+        
+        $("html, body").animate({scrollTop: top}, 1500);
+      });
+
     $("#nav-btn").click(function () {
         if($(".page-header__toggle").hasClass("page-header__toggle--closed")) {
             $(".page-header__nav").css("display", "block");
